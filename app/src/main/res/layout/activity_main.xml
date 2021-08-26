@@ -7,101 +7,179 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Smart NGL Cleaner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
-
-    <ImageButton
-        android:id="@+id/humidityButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:src="@drawable/ic_humidity"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageButton
-        android:id="@+id/temperatureButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_thermometer"
-
-        app:layout_constraintEnd_toEndOf="@+id/humidityButton"
-        app:layout_constraintTop_toBottomOf="@+id/humidityButton" />
-
-    <ImageButton
-        android:id="@+id/liveFeedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_video_camera"
-        app:layout_constraintEnd_toEndOf="@+id/temperatureButton"
-        app:layout_constraintStart_toStartOf="@+id/temperatureButton"
-        app:layout_constraintTop_toBottomOf="@+id/temperatureButton" />
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:indeterminateOnly="false"
-        android:progress="70"
-        android:progressDrawable="@drawable/circle"
-        app:layout_constraintBottom_toBottomOf="@+id/liveFeedButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/temperatureButton"
-        app:layout_constraintTop_toTopOf="@+id/humidityButton" />
-
-    <TextView
-        android:id="@+id/progress_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
-        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
-        app:layout_constraintStart_toStartOf="@+id/progress_bar"
-        app:layout_constraintTop_toTopOf="@+id/progress_bar"
-        android:text="Washing" />
-
-    <TextView
-        android:id="@+id/finishing_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12:40"
-        app:layout_constraintEnd_toEndOf="@+id/progress_status"
-        app:layout_constraintStart_toStartOf="@+id/progress_status"
-        app:layout_constraintTop_toBottomOf="@+id/progress_status" />
-
-    <TextView
-        android:id="@+id/time_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10m 39s"
-        android:textSize="40dp"
-        android:textColor="#000"
-        app:layout_constraintBottom_toTopOf="@+id/vertical_progressBar"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/liveFeedButton"
-        app:layout_constraintVertical_bias="0.729" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ProgressBar
-        android:id="@+id/vertical_progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:progressDrawable="@drawable/vertical_progress_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/textSmartNGL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:text="Smart NGL"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textCleaner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:text="Cleaner"
+            android:textColor="#040404"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSmartNGL" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/screen_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCleaner">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/buttonTemp"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableTop="@drawable/ic_thermometer"
+                    android:gravity="center"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <Button
+                    android:id="@+id/buttonHumidity"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ic_humidity"
+                    android:gravity="center"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonTemp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <Button
+                    android:id="@+id/buttonCam"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ic_baseline_videocam_24"
+                    android:gravity="center"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonHumidity"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@+id/buttons"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularProgressBar"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    app:cpb_background_progressbar_color="#b6bbd8"
+                    app:cpb_background_progressbar_width="4dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="#3f51b5"
+                    app:cpb_progressbar_width="4dp"
+                    app:cpb_round_border="false" />
+
+                <TextView
+                    android:id="@+id/textStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/circularProgressBar"
+                    android:layout_alignTop="@id/circularProgressBar"
+                    android:layout_alignRight="@id/circularProgressBar"
+                    android:layout_alignBottom="@id/circularProgressBar"
+                    android:gravity="center"
+                    android:text="washing"
+                    android:textColor="#040404"
+                    android:textSize="26sp" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/screen_top"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textCountdownMinsNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="120dp"
+                android:text="10"
+                android:textColor="#040404"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textCountdownMins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="m"
+                android:textColor="#040404"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toRightOf="@+id/textCountdownMinsNum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textCountdownSecNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="39"
+                android:textColor="#040404"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toRightOf="@+id/textCountdownMins"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textCountdownSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="s"
+                android:textColor="#040404"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toRightOf="@+id/textCountdownSecNum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

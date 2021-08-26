@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "377970290795",
+    "project_id": "oip-database",
+    "storage_bucket": "oip-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377970290795:android:1d1f850635c926fc9e812e",
+        "android_client_info": {
+          "package_name": "com.example.ngltube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377970290795-fggfa9jrj8ndkoi8jahgvtrridhvf7je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9U4gdiLeJRlOOdRnmeVze59OZCCFOjDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377970290795-fggfa9jrj8ndkoi8jahgvtrridhvf7je.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
