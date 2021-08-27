@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tyscr/Desktop/ngl_android/app/src/main/res/drawable/circle.xml" value="0.1453125" />
         <entry key="..\:/Users/tyscr/Desktop/ngl_android/app/src/main/res/drawable/ic_baseline_videocam_24.xml" value="0.17135416666666667" />
         <entry key="..\:/Users/tyscr/Desktop/ngl_android/app/src/main/res/drawable/ic_humidity.xml" value="0.17135416666666667" />
         <entry key="..\:/Users/tyscr/Desktop/ngl_android/app/src/main/res/drawable/ic_thermometer.xml" value="0.17135416666666667" />
-        <entry key="..\:/Users/tyscr/Desktop/ngl_android/app/src/main/res/layout/activity_main.xml" value="0.14114583333333333" />
+        <entry key="..\:/Users/tyscr/Desktop/ngl_android/app/src/main/res/layout/activity_main.xml" value="0.268" />
       </map>
     </option>
   </component>

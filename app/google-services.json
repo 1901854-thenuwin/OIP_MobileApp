@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "377970290795",
+    "firebase_url": "https://oip-database-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "oip-database",
     "storage_bucket": "oip-database.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:377970290795:android:1d1f850635c926fc9e812e",
+        "mobilesdk_app_id": "1:377970290795:android:1b23c9845b5453559e812e",
         "android_client_info": {
           "package_name": "com.example.ngltube"
         }
